@@ -43,6 +43,12 @@ h6 {
   transition: all 0.4s;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .back-to-top i {
   font-size: 28px;
   color: #151515;
