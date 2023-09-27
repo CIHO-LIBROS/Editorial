@@ -589,6 +589,14 @@ ________________________________________________________________
   font-size: 32px;
   font-weight: 700;
 }
+.pricing-pricedOS {
+  color: #f90101;
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
 
  
 /*--------------------------------------------------------------
