@@ -160,9 +160,21 @@
               <div class="mx-auto d-block d-md-block text-center">
                 <span class="pricing-price ">$11.000 cop</span>
               </div>
-              <a href="#metodos"><button type="button" class="btn btn-lg btn-success mx-auto d-block d-md-block">Compre aquí</button></a>
+              <a href="#metodos">
+                <button type="button" class="btn btn-lg btn-success mx-auto d-block d-md-block" onclick="trackCompraEvento()">
+                  Compre aquí
+                </button>
+              </a>
                
             </div>
+<!--             function de facebook track  -->
+            <script>
+              function trackCompraEvento() {
+                fbq('trackCustom', 'Compra', { action: 'click' });
+                
+                window.location.href = "#metodos";
+              }
+            </script>
           </div>
         </div>
 
