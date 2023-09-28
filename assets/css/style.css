@@ -598,6 +598,15 @@ ________________________________________________________________
   text-decoration-thickness: 2px;
 }
 
+.spanotice {
+  color: #f90101;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+
+}
+
  
 /*--------------------------------------------------------------
 # Clients
