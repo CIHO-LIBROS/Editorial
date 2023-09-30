@@ -161,19 +161,12 @@
                 <span class="pricing-price ">$11.000 cop</span>
               </div>
               <a href="#metodos">
-                <button type="button" class="btn btn-lg btn-success mx-auto d-block d-md-block" onclick="trackCompraEvento()">
+                <button type="button" class="btn btn-lg btn-success mx-auto d-block d-md-block" onclick="trackCompraEvento('Compra')">
                   Compre aquí
                 </button>
               </a>
                
             </div>
-<!--             function de facebook track  -->
-            <script>
-              function trackCompraEvento() {
-                fbq('trackCustom', 'Compra', { action: 'click' });
-                
-                window.location.href = "#metodos";
-              }
             </script>
           </div>
         </div>
@@ -273,7 +266,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Pago por Nequi</h5>
                     <p class="card-text">3112179641</p>
-                    <a target="_blank" href="https://wa.me/573112179641" class="btn btn-primary">enviar comprobante</a>
+                    <a target="_blank" href="https://wa.me/573112179641" class="btn btn-primary" onclick="trackCompraEvento('Nequi')" >enviar comprobante</a>
                   </div>
                 </div>
               </div>
@@ -282,7 +275,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Daviplata</h5>
                     <p class="card-text">3102675771</p>
-                    <a target="_blank" href="https://wa.me/573112179641" class="btn btn-primary">enviar comprobante</a>
+                    <a target="_blank" href="https://wa.me/573112179641" class="btn btn-primary" onclick="trackCompraEvento('daviplata')" >enviar comprobante</a>
                   </div>
                 </div>
               </div>
@@ -291,7 +284,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Paypal</h5>
                     <p class="card-text">alejandrabecerra1101@gmail.com</p>
-                    <a target="_blank"  href="https://wa.me/573112179641" class="btn btn-primary">enviar comprobante</a>
+                    <a target="_blank"  href="https://wa.me/573112179641" class="btn btn-primary" onclick="trackCompraEvento('Paypal')" >enviar comprobante</a>
                   </div>
                 </div>
               </div>
@@ -300,11 +293,10 @@
                   <div class="card-body">
                     <h5 class="card-title">Bancolombia ahorro</h5>
                     <p class="card-text">79500005247</p>
-                    <a target="_blank" href="https://wa.me/573112179641" class="btn btn-primary">enviar comprobante</a>
+                    <a target="_blank" href="https://wa.me/573112179641" class="btn btn-primary" onclick="trackCompraEvento('CompraBancolombia')">enviar comprobante</a>
                   </div>
                 </div>
               </div>
-            </div>
  
           </div>
 
@@ -428,7 +420,7 @@
         &copy; Copyright <strong><span>CL</span></strong>. derechos resservados
       </div>
       <div class="credits">
-        Designed by <a href="https://estrategadigital.github.io/">Ciholibros Alianza digital</a>
+        Designed by <a href="https://estrategadigital.github.io/">estratega-digital Alianza digital</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -447,6 +439,18 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function trackCompraEvento(nombreEvento) {
+      // Registra el evento personalizado con el nombre proporcionado
+      fbq('trackCustom', nombreEvento);
+      
+      // También puedes agregar cualquier otro código relacionado con la acción de clic aquí
+      
+      // Finalmente, redirige al usuario a la ubicación deseada (por ejemplo, "#metodos" en este caso)
+      window.location.href = "#metodos";
+    }
+  </script>
 
 </body>
 
