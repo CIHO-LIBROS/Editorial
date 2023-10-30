@@ -402,6 +402,33 @@ h6 {
   display: block;
 }
 
+/* _________________________________
+video hook
+_________________________________ */
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporción 16:9 para video */
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
